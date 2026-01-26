@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Daily Insight - 加密货币每日洞察</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            gray: '#f5f5f7',
+                            dark: '#1d1d1f',
+                            blue: '#0071e3'
+                        }
+                    },
+                    backdropBlur: {
+                        xs: '2px',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap');
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f7;
+            transition: background-color 0.3s ease;
+        }
+        .dark body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .dark .glass {
+            background: rgba(29, 29, 31, 0.7);
+        }
+        .bento-card {
+            border-radius: 24px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .bento-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="flex min-h-screen">
+        <!-- Sidebar Navigation -->
+        <aside id="sidebar" class="w-72 glass border-r border-gray-200 dark:border-gray-800 sticky top-0 h-screen overflow-y-auto p-6 z-50 hidden md:block">
+            <div class="flex items-center mb-10">
+                <i class="fa-solid fa-bolt-lightning text-apple-blue text-2xl mr-3"></i>
+                <h1 class="text-xl font-semibold tracking-tight">Insight Portal</h1>
+            </div>
+            
+            <nav class="space-y-8">
+                <div>
+                    <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Latest</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="/content/2026/01/26/" class="flex items-center p-3 rounded-xl bg-apple-blue text-white shadow-lg shadow-blue-500/30">
+                                <span class="text-sm font-medium">2026-01-26</span>
+                                <span class="ml-auto text-[10px] bg-white/20 px-2 py-0.5 rounded-full">New</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div id="history-nav">
+                    <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">History</h3>
+                    <div class="space-y-4">
+                        <details class="group" open>
+                            <summary class="flex items-center cursor-pointer list-none text-sm font-medium text-gray-600 dark:text-gray-300">
+                                <i class="fa-solid fa-chevron-right mr-2 text-[10px] transition-transform group-open:rotate-90"></i>
+                                2026
+                            </summary>
+                            <ul class="ml-6 mt-2 space-y-2 border-l border-gray-200 dark:border-gray-800">
+                                <li>
+                                    <details class="group/month">
+                                        <summary class="flex items-center cursor-pointer list-none text-sm font-medium text-gray-500 py-1 pl-4 hover:text-apple-blue">
+                                            January
+                                        </summary>
+                                        <ul class="ml-4 mt-1 space-y-1">
+                                            <li><a href="/content/2026/01/26/" class="text-xs text-gray-400 hover:text-apple-blue pl-4 py-1 block">26th Insight</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                            </ul>
+                        </details></div>
+                </div>
+            </nav>
+
+            <div class="absolute bottom-10 left-6 right-6">
+                <button id="theme-toggle" class="w-full flex items-center justify-center p-3 rounded-xl bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-400 transition-colors">
+                    <i class="fa-solid fa-moon dark:hidden"></i>
+                    <i class="fa-solid fa-sun hidden dark:block"></i>
+                    <span class="ml-2 text-sm font-medium">Toggle Theme</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6 md:p-12 lg:p-16">
+            <!-- Header -->
+            <header class="flex justify-between items-end mb-12">
+                <div>
+                    <p class="text-apple-blue font-semibold tracking-wide uppercase text-sm mb-2">Daily Digest</p>
+                    <h2 class="text-4xl md:text-5xl font-bold tracking-tight">Today's Insight</h2>
+                    <p class="text-gray-500 mt-4 text-lg">Monday, January 26, 2026</p>
+                </div>
+                <div id="auth-section" class="flex space-x-4">
+                    <button class="px-6 py-2.5 rounded-full border border-gray-300 dark:border-gray-700 font-medium text-sm hover:bg-white dark:hover:bg-gray-800 transition-colors">Login</button>
+                    <button class="px-6 py-2.5 rounded-full bg-apple-dark text-white dark:bg-white dark:text-black font-medium text-sm hover:opacity-90 transition-opacity">Join</button>
+                </div>
+            </header>
+
+            <!-- Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-6 auto-rows-[200px]">
+                <!-- Major Card -->
+                <div class="md:col-span-2 md:row-span-2 bento-card bg-white dark:bg-gray-900 p-8 flex flex-col justify-between group relative overflow-hidden shadow-sm">
+                    <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fa-brands fa-bitcoin text-9xl"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <span class="px-3 py-1 bg-orange-500/10 text-orange-600 text-[10px] font-bold uppercase rounded-full tracking-wider mb-6 inline-block">Market Leader</span>
+                        <h3 class="text-3xl font-bold mt-4 leading-tight">Bitcoin Consolidates Below $90k</h3>
+                        <p class="text-gray-500 mt-4 line-clamp-3">BTC struggles to maintain momentum as Gold surges to $5,000. Investors are weighing macro risks including a potential US government shutdown.</p>
+                    </div>
+                    <div class="relative z-10 flex items-center justify-between mt-8">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-2xl font-bold">$88,421</span>
+                            <span class="text-red-500 text-sm font-medium"><i class="fa-solid fa-caret-down mr-1"></i>2.4%</span>
+                        </div>
+                        <a href="/content/2026/01/26/" class="w-12 h-12 rounded-full bg-apple-blue text-white flex items-center justify-center group-hover:translate-x-1 transition-transform">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Secondary Card 1 -->
+                <div class="md:col-span-2 md:row-span-1 bento-card bg-gradient-to-br from-blue-600 to-indigo-700 p-6 text-white shadow-lg shadow-blue-500/20">
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-xl font-bold leading-snug">Digital Asset Market Clarity Act</h3>
+                        <i class="fa-solid fa-gavel text-white/30 text-2xl"></i>
+                    </div>
+                    <p class="text-white/80 mt-3 text-sm line-clamp-2">Senate committee markup scheduled for Jan 2026. A major step towards institutional adoption.</p>
+                    <div class="mt-4 flex items-center">
+                        <span class="text-xs font-semibold bg-white/20 px-2 py-1 rounded">Policy Update</span>
+                    </div>
+                </div>
+
+                <!-- Secondary Card 2 -->
+                <div class="md:col-span-1 md:row-span-1 bento-card bg-white dark:bg-gray-900 p-6 shadow-sm border border-gray-100 dark:border-gray-800">
+                    <div class="text-apple-blue mb-4">
+                        <i class="fa-solid fa-microchip text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Quantum Defense</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">"Bitcoin Quantum" testnet launched to address future vulnerabilities.</p>
+                </div>
+
+                <!-- Secondary Card 3 -->
+                <div class="md:col-span-1 md:row-span-1 bento-card bg-gray-100 dark:bg-gray-800 p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-bold text-gray-400 uppercase">Ethereum</span>
+                        <i class="fa-brands fa-ethereum text-gray-400"></i>
+                    </div>
+                    <div class="text-2xl font-bold">$2,870</div>
+                    <div class="text-red-500 text-xs mt-1">-7.2%</div>
+                </div>
+
+                <!-- Footer Card -->
+                <div class="md:col-span-4 md:row-span-1 bento-card bg-apple-dark dark:bg-white dark:text-black p-8 flex items-center justify-between text-white">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">Stay Ahead of the Curve</h3>
+                        <p class="text-white/60 dark:text-black/60">Get the most accurate crypto insights delivered to your terminal.</p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <input type="email" placeholder="Email address" class="px-6 py-3 rounded-full bg-white/10 dark:bg-black/10 border border-white/20 dark:border-black/20 focus:outline-none focus:ring-2 ring-apple-blue min-w-[300px]">
+                        <button class="px-8 py-3 rounded-full bg-apple-blue text-white font-bold hover:bg-blue-600 transition-colors">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="mt-20 pt-8 border-t border-gray-200 dark:border-gray-800 flex justify-between items-center text-gray-400 text-sm">
+                <p>&copy; 2026 Derik LU. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-apple-blue transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-apple-blue transition-colors">Terms</a>
+                    <a href="https://github.com/Derik-LU" class="hover:text-apple-blue transition-colors"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        // Theme Toggle Logic
+        const html = document.documentElement;
+        const themeToggle = document.getElementById('theme-toggle');
+        
+        // Initialize theme
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                html.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+
+        // Simple animation for bento cards
+        const cards = document.querySelectorAll('.bento-card');
+        cards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, index * 100);
+        });
+    </script>
+</body>
+</html>
