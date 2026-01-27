@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Insight - 2026-01-27</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            gray: '#f5f5f7',
+                            dark: '#1d1d1f',
+                            blue: '#0071e3'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap');
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f7;
+        }
+        .dark body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .dark .glass {
+            background: rgba(29, 29, 31, 0.7);
+        }
+        .content-card {
+            border-radius: 32px;
+            overflow: hidden;
+            background: white;
+            transition: transform 0.3s ease;
+        }
+        .dark .content-card {
+            background: #1d1d1f;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <nav class="glass sticky top-0 z-50 border-b border-gray-200 dark:border-gray-800 px-6 py-4">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <a href="../../../../index.html" class="text-apple-blue font-semibold flex items-center">
+                <i class="fa-solid fa-chevron-left mr-2"></i> Back to Portal
+            </a>
+            <div class="text-sm font-medium text-gray-500">January 27, 2026</div>
+            <div class="flex space-x-4">
+                <i class="fa-solid fa-share-nodes text-gray-400 cursor-pointer hover:text-apple-blue"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 md:py-20">
+        <header class="mb-16 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-6">Daily Market Pulse</h1>
+            <p class="text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">过去24小时加密货币市场、政治与宏观经济核心深度解读。</p>
+        </header>
+
+        <div class="space-y-12">
+            <!-- Article 1 -->
+            <section class="content-card shadow-sm">
+                <img src="../../../../imgs/2026/01/27/commodities.jpg" alt="Bitcoin vs Silver" class="w-full h-[400px] object-cover">
+                <div class="p-8 md:p-12">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="px-3 py-1 bg-orange-500/10 text-orange-600 text-[10px] font-bold uppercase rounded-full tracking-wider">Market Analysis</span>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-6">Silver & Gold Outperform Bitcoin Amid Macro Uncertainty</h2>
+                    <div class="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-400 leading-loose text-lg">
+                        <p>Bitcoin (BTC) continues to struggle around the $88,000 mark, while silver has surged past $115, overtaking Bitcoin's post-2017 percentage gains. This trend underscores a growing preference for traditional commodities as safe havens while markets await the next Federal Reserve rate decision and monitor government shutdown risks.</p>
+                    </div>
+                    <div class="mt-8 pt-8 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+                        <span class="text-sm text-gray-400">Source: The Block</span>
+                        <a href="https://www.theblock.co/post/silver-overtakes-bitcoins-post-2017-gains" class="text-apple-blue font-semibold hover:underline">Read Full Article <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Article 2 -->
+            <section class="content-card shadow-sm">
+                <img src="../../../../imgs/2026/01/27/avalanche.jpg" alt="Avalanche ETF" class="w-full h-[400px] object-cover">
+                <div class="p-8 md:p-12">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-500/10 text-blue-600 text-[10px] font-bold uppercase rounded-full tracking-wider">Institutional Adoption</span>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-6">First Avalanche ETF Hits US Markets</h2>
+                    <div class="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-400 leading-loose text-lg">
+                        <p>VanEck has officially launched the first Avalanche (AVAX) ETF in the United States. This marks a significant milestone for the Layer-1 ecosystem, following the success of Bitcoin and Ethereum ETFs. The move is expected to bring institutional-grade liquidity to the Avalanche network.</p>
+                    </div>
+                    <div class="mt-8 pt-8 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+                        <span class="text-sm text-gray-400">Source: The Block</span>
+                        <a href="https://www.theblock.co/post/first-avalanche-etf-hits-us-markets" class="text-apple-blue font-semibold hover:underline">Read Full Article <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Article 3 -->
+            <section class="content-card shadow-sm">
+                <img src="../../../../imgs/2026/01/27/polymarket.jpg" alt="Polymarket MLS" class="w-full h-[400px] object-cover">
+                <div class="p-8 md:p-12">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="px-3 py-1 bg-purple-500/10 text-purple-600 text-[10px] font-bold uppercase rounded-full tracking-wider">DeFi</span>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-6">Polymarket Secures Exclusive MLS Licensing Deal</h2>
+                    <div class="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-400 leading-loose text-lg">
+                        <p>Polymarket, the leading decentralized prediction market, has signed an exclusive licensing deal with Major League Soccer (MLS). This partnership will allow Polymarket to offer unique data-driven betting markets for US soccer, further bridging the gap between mainstream sports and decentralized finance (DeFi).</p>
+                    </div>
+                    <div class="mt-8 pt-8 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+                        <span class="text-sm text-gray-400">Source: The Block</span>
+                        <a href="https://www.theblock.co/post/polymarket-signs-exclusive-licensing-deal-with-mls" class="text-apple-blue font-semibold hover:underline">Read Full Article <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Article 4 -->
+            <section class="content-card shadow-sm">
+                <img src="../../../../imgs/2026/01/27/bitwise.jpg" alt="Bitwise Morpho" class="w-full h-[400px] object-cover">
+                <div class="p-8 md:p-12">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="px-3 py-1 bg-green-500/10 text-green-600 text-[10px] font-bold uppercase rounded-full tracking-wider">Yield</span>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-6">Bitwise Launches On-Chain Vault via Morpho</h2>
+                    <div class="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-400 leading-loose text-lg">
+                        <p>Bitwise has debuted its first on-chain vault using the Morpho protocol, targeting yields of up to 6% on USDC. This institutional-grade DeFi product demonstrates the ongoing shift of traditional asset managers toward permissionless, transparent financial infrastructure.</p>
+                    </div>
+                    <div class="mt-8 pt-8 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+                        <span class="text-sm text-gray-400">Source: The Block</span>
+                        <a href="https://www.theblock.co/post/bitwise-debuts-onchain-vault-via-morpho" class="text-apple-blue font-semibold hover:underline">Read Full Article <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Article 5 -->
+            <section class="content-card shadow-sm">
+                <img src="../../../../imgs/2026/01/27/ethereum.jpg" alt="Ethereum Staking" class="w-full h-[400px] object-cover">
+                <div class="p-8 md:p-12">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="px-3 py-1 bg-indigo-500/10 text-indigo-600 text-[10px] font-bold uppercase rounded-full tracking-wider">Treasury</span>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-6">BitMine Executes Massive Ethereum Purchase</h2>
+                    <div class="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-400 leading-loose text-lg">
+                        <p>Ethereum treasury firm BitMine has made its largest purchase of 2026, acquiring over 40,000 ETH. The firm now holds and stakes over 2 million tokens, signaling strong institutional confidence in Ethereum's long-term value despite recent price volatility below $3,000.</p>
+                    </div>
+                    <div class="mt-8 pt-8 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+                        <span class="text-sm text-gray-400">Source: CoinDesk</span>
+                        <a href="https://www.coindesk.com/" class="text-apple-blue font-semibold hover:underline">Read Full Article <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="mt-32 text-center text-gray-400 text-sm">
+            <p>&copy; 2026 Derik LU. All rights reserved.</p>
+            <p class="mt-2">Powered by Gemini-3-Flash-Preview & Trae Agent</p>
+        </footer>
+    </main>
+</body>
+</html>
