@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Insight - 2026-02-02</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            gray: '#f5f5f7',
+                            dark: '#1d1d1f',
+                            blue: '#0071e3'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap');
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f7;
+        }
+        .dark body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .dark .glass {
+            background: rgba(29, 29, 31, 0.7);
+        }
+        .content-card {
+            border-radius: 32px;
+            overflow: hidden;
+            background: white;
+            transition: transform 0.3s ease;
+        }
+        .dark .content-card {
+            background: #1d1d1f;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <nav class="glass sticky top-0 z-50 border-b border-gray-200 dark:border-gray-800 px-6 py-4">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <a href="../../../../index.html" class="text-apple-blue font-semibold flex items-center">
+                <i class="fa-solid fa-chevron-left mr-2"></i> Back to Portal
+            </a>
+            <div class="text-sm font-medium text-gray-500">February 2, 2026</div>
+            <div class="flex space-x-4">
+                <i class="fa-solid fa-share-nodes text-gray-400 cursor-pointer hover:text-apple-blue"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 md:py-20">
+        <header class="mb-16 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-6">Daily Market Pulse</h1>
+            <p class="text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">过去24小时加密货币市场、政治与宏观经济核心深度解读。</p>
+        </header>
+
+        <div class="space-y-12">
+            <!-- Article 1: Corporate Adoption -->
+            <section class="content-card shadow-sm">
+                <img src="../../../../imgs/2026/02/02/corporate_btc.jpg" alt="Corporate Bitcoin" class="w-full h-[400px] object-cover">
+                <div class="p-8 md:p-12">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="px-3 py-1 bg-orange-500/10 text-orange-600 text-[10px] font-bold uppercase rounded-full tracking-wider">Corporate Treasury</span>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-6">172 Public Companies Now Hold Bitcoin as Strategic Reserve</h2>
+                    <div class="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-400 leading-loose text-lg">
+                        <p>A structural shift in corporate finance is underway. As of early 2026, 172 publicly traded companies have integrated Bitcoin into their treasury reserves, a 40% increase since Q3 2025. Beyond MicroStrategy, institutions like SoftBank are increasingly using BTC as collateral and long-term value storage, cementing its status as a mainstream financial asset.</p>
+                    </div>
+                    <div class="mt-8 pt-8 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+                        <span class="text-sm text-gray-400">Source: Bitwise & SVB</span>
+                        <a href="https://www.svb.com/industry-insights/fintech/2026-crypto-outlook/" class="text-apple-blue font-semibold hover:underline">Read Full Article <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Article 2: Stablecoin Dollar -->
+            <section class="content-card shadow-sm">
+                <img src="../../../../imgs/2026/02/02/stablecoin_payments.jpg" alt="Stablecoin Payments" class="w-full h-[400px] object-cover">
+                <div class="p-8 md:p-12">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-500/10 text-blue-600 text-[10px] font-bold uppercase rounded-full tracking-wider">Payments</span>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-6">Stablecoins Become the "Internet's Dollar" for Global Trade</h2>
+                    <div class="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-400 leading-loose text-lg">
+                        <p>Following landmark legislation in 2025, stablecoins have evolved from niche trading tools to the primary settlement layer for global commerce. In 2026, these digital dollars are deeply integrated into payment processors and market infrastructure, offering near-instant cross-border settlement with regulatory-grade compliance.</p>
+                    </div>
+                    <div class="mt-8 pt-8 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+                        <span class="text-sm text-gray-400">Source: SVB Fintech</span>
+                        <a href="https://www.svb.com/industry-insights/fintech/2026-crypto-outlook/" class="text-apple-blue font-semibold hover:underline">Read Full Article <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Article 3: AI x Crypto -->
+            <section class="content-card shadow-sm">
+                <img src="../../../../imgs/2026/02/02/ai_crypto.jpg" alt="AI and Crypto" class="w-full h-[400px] object-cover">
+                <div class="p-8 md:p-12">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="px-3 py-1 bg-purple-500/10 text-purple-600 text-[10px] font-bold uppercase rounded-full tracking-wider">AI x Web3</span>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-6">AI Agents and Decentralized Protocols Redefine Digital Commerce</h2>
+                    <div class="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-400 leading-loose text-lg">
+                        <p>The convergence of Artificial Intelligence and Blockchain is accelerating. AI agents are increasingly using decentralized protocols for automated value transfer, while ZK-proofs provide the necessary identity verification layers. This synergy is solving centralisation risks in AI and enabling a new era of autonomous digital trade.</p>
+                    </div>
+                    <div class="mt-8 pt-8 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+                        <span class="text-sm text-gray-400">Source: Coinbase Institutional</span>
+                        <a href="https://www.coinbase.com/institutional/research-insights/research/market-intelligence/2026-crypto-market-outlook" class="text-apple-blue font-semibold hover:underline">Read Full Article <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Article 4: RWA Integration -->
+            <section class="content-card shadow-sm">
+                <img src="../../../../imgs/2026/02/02/rwa_wallstreet.jpg" alt="RWA Wall Street" class="w-full h-[400px] object-cover">
+                <div class="p-8 md:p-12">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="px-3 py-1 bg-green-500/10 text-green-600 text-[10px] font-bold uppercase rounded-full tracking-wider">Tokenization</span>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-6">Wall Street's Vertical Integration of RWA Tokenization</h2>
+                    <div class="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-400 leading-loose text-lg">
+                        <p>BlackRock and other asset management giants are moving beyond pilots to full vertical integration of Real-World Assets (RWA). By bringing equities, bonds, and commodities onto public chains like Ethereum and Solana, institutions are achieving unprecedented capital efficiency and instant settlement finality for global investors.</p>
+                    </div>
+                    <div class="mt-8 pt-8 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+                        <span class="text-sm text-gray-400">Source: The Economist</span>
+                        <a href="https://www.svb.com/industry-insights/fintech/2026-crypto-outlook/" class="text-apple-blue font-semibold hover:underline">Read Full Article <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Article 5: M&A Banner Year -->
+            <section class="content-card shadow-sm">
+                <img src="../../../../imgs/2026/02/02/crypto_m_a.jpg" alt="Crypto Mergers" class="w-full h-[400px] object-cover">
+                <div class="p-8 md:p-12">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="px-3 py-1 bg-indigo-500/10 text-indigo-600 text-[10px] font-bold uppercase rounded-full tracking-wider">Consolidation</span>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-6">2026 Forecasted as Banner Year for Crypto M&A Activity</h2>
+                    <div class="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-400 leading-loose text-lg">
+                        <p>The boundary between traditional fintech and crypto-native firms is blurring. 2026 is seeing record levels of Mergers and Acquisitions as established financial institutions acquire crypto innovators to secure blockchain capabilities and regulatory licenses. This consolidation phase marks the industry's maturation into a pillar of global finance.</p>
+                    </div>
+                    <div class="mt-8 pt-8 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+                        <span class="text-sm text-gray-400">Source: SVB Outlook</span>
+                        <a href="https://www.svb.com/industry-insights/fintech/2026-crypto-outlook/" class="text-apple-blue font-semibold hover:underline">Read Full Article <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="mt-32 text-center text-gray-400 text-sm">
+            <p>&copy; 2026 Derik LU. All rights reserved.</p>
+            <p class="mt-2">Powered by Gemini-3-Flash-Preview & Trae Agent</p>
+        </footer>
+    </main>
+</body>
+</html>
